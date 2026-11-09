@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/homepage.dart';
 
 class Loginpage extends StatefulWidget {
   const Loginpage({super.key});
@@ -107,8 +108,17 @@ class _LoginpageState extends State<Loginpage> {
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Logging in...')),
+                          const SnackBar(
+                            content: Text('Logging in...'),
+                            backgroundColor: Colors.green,
+                          ),
                         );
+
+                        // final email = _emailController.text;
+                        // final pass = _passwordController.text;
+
+                        // add two strings in the homepage and assign them in the constractor 
+                        // Navigator.push(context, MaterialPageRoute(builder: ((context) => MyHomePage(email:email , password : pass))));
                       }
                     },
                     style: ElevatedButton.styleFrom(
@@ -130,9 +140,19 @@ class _LoginpageState extends State<Loginpage> {
                   ),
                 ),
 
-                Text(
-                  "Don't have an account? Sign up",
-                  style: TextStyle(color: Colors.blue, fontSize: 14),
+                TextButton(
+                  onPressed: () => {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: ((context) => const MyHomePage()),
+                      ),
+                    ),
+                  },
+                  child: Text(
+                    "Deosn't Have an account  Sign up here .",
+                    style: TextStyle(color: Colors.blue),
+                  ),
                 ),
               ],
             ),

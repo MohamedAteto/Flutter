@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/loginpage.dart';
+// import 'package:flutter_application_1/loginpage.dart';
+// import 'package:flutter_application_1/loginpagetask.dart';
+// import 'package:flutter_application_1/signuptask.dart';
+import 'package:flutter_application_1/statefullpractice.dart';
 
-import 'customlitstile.dart'; // Ensure this points to your file containing MyWidget
+// import 'customlitstile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +15,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter App',
-      home:
-          Loginpage(), // Your login page starts here safely inside MaterialApp
+      home: Statefullpractice(),
     );
   }
 }
