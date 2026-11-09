@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_application_1/loginpagetask.dart';
 // import 'package:flutter_application_1/signuptask.dart';
 import 'package:flutter_application_1/statefullpractice.dart';
+import 'package:flutter_application_1/statfulltask.dart';
 
 // import 'customlitstile.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter App',
-      home: Statefullpractice(),
+      home: ScoreCounterScreen(),
     );
   }
 }

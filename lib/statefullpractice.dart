@@ -32,7 +32,7 @@ class _MyWidgetState extends State<Statefullpractice> {
 
             RadioListTile<String>(
               value: "Male",
-              title: value,
+              title: Text("Male"),
 
               groupValue: SelectedValue,
 
