@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class ScoreCounterScreen extends StatefulWidget {
   const ScoreCounterScreen({super.key});
 
@@ -10,7 +8,6 @@ class ScoreCounterScreen extends StatefulWidget {
 }
 
 class _ScoreCounterScreenState extends State<ScoreCounterScreen> {
-  
   int teamAScore = 0;
   int teamBScore = 0;
 
@@ -26,63 +23,98 @@ class _ScoreCounterScreenState extends State<ScoreCounterScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // Team A Section
               Column(
                 children: [
-                  const Text('Team A', style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
+                  const Text(
+                    'Team A',
+                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                  ),
                   Text('$teamAScore', style: const TextStyle(fontSize: 100)),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: Colors.red,
+                    ),
                     onPressed: () => setState(() => teamAScore += 1),
                     child: const Text('Add 1 Point'),
                   ),
+                  SizedBox(height: 10),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: Colors.red,
+                    ),
                     onPressed: () => setState(() => teamAScore += 2),
                     child: const Text('Add 2 Point'),
                   ),
+                  SizedBox(height: 10),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: Colors.red,
+                    ),
                     onPressed: () => setState(() => teamAScore += 3),
                     child: const Text('Add 3 Point'),
                   ),
                 ],
               ),
-              
+
               // Divider line
               const SizedBox(
                 height: 300,
                 child: VerticalDivider(color: Colors.grey, thickness: 2),
               ),
 
-
-
               // Team B Section
               Column(
                 children: [
-                  const Text('Team B', style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
+                  const Text(
+                    'Team B',
+                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                  ),
                   Text('$teamBScore', style: const TextStyle(fontSize: 100)),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: Colors.red,
+                    ),
                     onPressed: () => setState(() => teamBScore += 1),
                     child: const Text('Add 1 Point'),
                   ),
+                  SizedBox(height: 10),
+
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: Colors.red,
+                    ),
                     onPressed: () => setState(() => teamBScore += 2),
                     child: const Text('Add 2 Point'),
                   ),
+                  SizedBox(height: 10),
+
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: Colors.red,
+                    ),
                     onPressed: () => setState(() => teamBScore += 3),
                     child: const Text('Add 3 Point'),
                   ),
                 ],
               ),
-
-
-              
             ],
           ),
           const SizedBox(height: 40),
           // Reset Button
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              foregroundColor: Colors.white,
+              backgroundColor: Colors.red,
+            ),
             onPressed: () => setState(() {
               teamAScore = 0;
               teamBScore = 0;

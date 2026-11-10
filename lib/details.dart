@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+import 'package:untitled/component.dart';
+
+class Details extends StatelessWidget {
+  final Product product;
+  const Details({required this.product, super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.deepPurple,
+        title: Text("Details page", style: TextStyle(color: Colors.white)),
+      ),
+      body: Center(
+        child: Card(
+          color: Colors.white,
+          elevation: 4,
+          shadowColor: Colors.black,
+          child: ListTile(
+            leading: CircleAvatar(
+              backgroundColor: Colors.deepPurpleAccent.withValues(alpha: 0.1),
+              child: Icon(product.icon, color: Colors.deepPurple),
+            ),
+            title: Text(product.name),
+            subtitle: Text("\$${product.price}"),
+            trailing: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.star, color: Colors.yellow),
+                SizedBox(width: 10),
+                Text(product.rate),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
